@@ -166,7 +166,7 @@ function setChallenge()
   var root = fret.data('audio-id');
   if (fret.hasClass('string_4') || fret.hasClass('string_3'))
   {
-    challenge = [(root + challengeData.ST), root];
+    challenge = [root, (root - challengeData.ST)];
   }
   else
   {
