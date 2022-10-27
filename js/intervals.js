@@ -164,7 +164,14 @@ function setChallenge()
   challengeData = getRandomInterval();
         
   var root = fret.data('audio-id');
-  challenge = [root, (root + challengeData.ST)];
+  if (fret.className.includes('string_4'))
+  {
+    challenge = [root, (root + challengeData.ST)];
+  }
+  else
+  {
+    challenge = [root, (root + challengeData.ST)];
+  }
   
   //create both challenge notes
   createSoundIfNotExists(challenge[0]);
