@@ -164,9 +164,9 @@ function setChallenge()
   challengeData = getRandomInterval();
         
   var root = fret.data('audio-id');
-  if (fret.className.includes('string_4'))
+  if (fret.hasClass('string_4') || fret.hasClass('string_3'))
   {
-    challenge = [root, (root + challengeData.ST)];
+    challenge = [(root + challengeData.ST), root];
   }
   else
   {
